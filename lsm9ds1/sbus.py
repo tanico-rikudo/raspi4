@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import smbus
 from smbus2 import SMBus 
 import time
 
