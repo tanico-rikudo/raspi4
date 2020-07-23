@@ -6,7 +6,7 @@ bus_number = 1
 # pls check: i2cdetect -y 1
 i2c_address = 0x76
 
-bus = SMBus(bus_number)
+bus = smbus.SMBus(1)
 t_fine = 0.0
 
 

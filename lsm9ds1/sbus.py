@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import smbus
+from smbus2 import SMBus 
 import time
 
 addressG = 0x6b
@@ -16,7 +17,8 @@ CTRL_REG4    = 0x1E
 CTRL_REG5_XL = 0x1F
 CTRL_REG3_M  = 0x22
 
-bus = smbus.SMBus(1)
+
+bus = SMBus(bus_number)
 
 bus.write_byte_data(addressG, CTRL_REG1_G, 0b00100000)   #gyro/accel odr and bw
 bus.write_byte_data(addressG, CTRL_REG4, 0b00111000)     #enable gyro axis
