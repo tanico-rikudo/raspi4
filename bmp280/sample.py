@@ -1,5 +1,5 @@
 # coding: utf-8
-from smbus2 import SMBus
+from smbus2 import SMBus #dedicated to BME
 import time
 
 bus_number = 1

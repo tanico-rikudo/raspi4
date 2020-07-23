@@ -1,4 +1,4 @@
-import wiringpi
+import wiringpi #ctrl GPIO
 import time
 import sys
 
