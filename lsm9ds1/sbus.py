@@ -16,7 +16,7 @@ CTRL_REG4    = 0x1E
 CTRL_REG5_XL = 0x1F
 CTRL_REG3_M  = 0x22
 
-
+bus_number = 1
 bus = SMBus(bus_number)
 
 bus.write_byte_data(addressG, CTRL_REG1_G, 0b00100000)   #gyro/accel odr and bw
