@@ -34,9 +34,9 @@ while True:
         AX = alter(rawAX)
         AY = alter(rawAY)
         AZ = alter(rawAZ)
-        print "AX:"+"%d" % AX  + " ",
-        print "AY:"+"%d" % AY  + " ",
-        print "AZ:"+"%d" % AZ  + " "
+        print("AX:"+"%d" % AX  + " ")
+        print("AY:"+"%d" % AY  + " ")
+        print("AZ:"+"%d" % AZ  + " ")
         dataG = bus.read_i2c_block_data(addressG, getG,6)
         rawGX = dataG[0]  | dataG[1] << 8
         rawGY = dataG[2]  | dataG[3] << 8
@@ -44,9 +44,9 @@ while True:
         GX = alter(rawGX)
         GY = alter(rawGY)
         GZ = alter(rawGZ)
-        print "GX: "+"%d" % GX  + "",
-        print "GY: "+"%d" % GY  + "",
-        print "GZ: "+"%d" % GZ  + ""
+        print("GX: "+"%d" % GX  + "")
+        print("GY: "+"%d" % GY  + "")
+        print("GZ: "+"%d" % GZ  + "")
         dataM = bus.read_i2c_block_data(addressM, getM,6)
         rawMX = dataM[0]  | dataM[1] << 8
         rawMY = dataM[2]  | dataM[3] << 8
@@ -54,11 +54,11 @@ while True:
         MX = alter(rawMX)
         MY = alter(rawMY)
         MZ = alter(rawMZ)
-        print "MX:"+"%d" % MX  + "",
-        print "MY:"+"%d" % MY  + "",
-        print "MZ:"+"%d" % MZ  + ""
+        print("MX:"+"%d" % MX  + "")
+        print("MY:"+"%d" % MY  + "")
+        print("MZ:"+"%d" % MZ  + "")
         dataTemp = bus.read_i2c_block_data(addressG, getTemp,2)
         rawTemp = dataTemp[0] | dataTemp[1] <<8
-        print "Temp:"+"%d" % rawTemp  + "  "
+        print("Temp:"+"%d" % rawTemp  + "  ")
         print("---------------------------------------------")
         time.sleep(1)
