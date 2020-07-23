@@ -1,27 +1,28 @@
-import wiringpi
+import wiringpi #ctrl GPIO
 import time
 import sys
 
-motor1_pin = 23
-motor2_pin = 24
+motor_pin_1 = 23
+motor_pin_2 = 24
 
-param = sys.argv
+wiringpi.wiringPiSetupGpio() #initilize GPIO control
 
-wiringpi.wiringPiSetupGpio()
-wiringpi.pinMode( motor1_pin, 0 )
-wiringpi.pinMode( motor2_pin, 0 )
-print("rigth")
-wiringpi.digitalWrite( motor1_pin, 1 )
-wiringpi.digitalWrite( motor2_pin, 0 )
+print("stop 5sec")
+wiringpi.pinMode( motor_pin_1, 0 )
+wiringpi.pinMode( motor_pin_2, 0 )
+print("right 5sec")
+wiringpi.digitalWrite( motor_pin_1, 1 )
+wiringpi.digitalWrite( motor_pin_2, 0 )
 time.sleep(5)
-print("stop")
-wiringpi.digitalWrite( motor1_pin, 1 )
-wiringpi.digitalWrite( motor2_pin, 1 )
+print("stop 5sec")
+wiringpi.digitalWrite( motor_pin_1, 1 )
+wiringpi.digitalWrite( motor_pin_2, 1 )
 time.sleep(5)
-print("left")
-wiringpi.digitalWrite( motor1_pin, 0 )
-wiringpi.digitalWrite( motor2_pin, 1 )
+print("left 5sec")
+wiringpi.digitalWrite( motor_pin_1, 0 )
+wiringpi.digitalWrite( motor_pin_2, 1 )
 time.sleep(5)
-print("stop")
-wiringpi.digitalWrite( motor1_pin, 0 )
-wiringpi.digitalWrite( motor2_pin, 0 )
+print("stop 5sec")
+wiringpi.digitalWrite( motor_pin_1, 0 )
+wiringpi.digitalWrite( motor_pin_2, 0 )
+print("Done")
