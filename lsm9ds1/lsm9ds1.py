@@ -1,8 +1,10 @@
+
 import time
 import board
 import busio
 import adafruit_lsm9ds1
-
+# pip3 install adafruit-circuitpython-lsm9ds1
+#https://www.st.com/content/ccc/resource/technical/document/datasheet/1e/3f/2a/d6/25/eb/48/46/DM00103319.pdf/files/DM00103319.pdf/jcr:content/translations/en.DM00103319.pdf
 # I2C connection:
 i2c = busio.I2C(board.SCL, board.SDA)
 sensor = adafruit_lsm9ds1.LSM9DS1_I2C(i2c)
